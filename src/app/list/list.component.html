@@ -1,0 +1,20 @@
+<table>
+    <thead>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Role</th>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of users" (click)="userSelected(user)" [ngClass]="user.color">
+      <td>
+       {{ user.name | titlecase }}
+      </td>
+      <td>
+        {{ user.age }}
+      </td>
+      <td>
+        {{ user.role }}
+      </td>
+    </tr>
+  </tbody>
+  </table>
