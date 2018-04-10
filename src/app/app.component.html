@@ -1,7 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  <app-list [users]="users" (onUserClick)="findUser($event)"></app-list>
-  <app-user-details *ngIf="user" [user]="user" (onUserDel)="deleteUser($event)"></app-user-details>
+  <app-list [users]="users$ | async" (onUserClick)="findUser($event)"></app-list>
+  <app-user-details *ngIf="currentUser" [user]="currentUser" (onUserDel)="deleteUser($event)" (onUserAdd)="addUser($event)"></app-user-details>
 </div>
 
 
